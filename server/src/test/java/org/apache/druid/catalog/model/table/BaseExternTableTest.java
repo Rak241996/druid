@@ -39,7 +39,7 @@ public class BaseExternTableTest
 {
   public static final Map<String, Object> CSV_FORMAT = ImmutableMap.of("type", CsvInputFormat.TYPE_KEY);
   protected static final List<ColumnSpec> COLUMNS = Arrays.asList(
-      new ColumnSpec("x", Columns.STRING, null),
+      new ColumnSpec("x", Columns.STRING, null) ,
       new ColumnSpec("y", Columns.LONG, null)
   );
 
@@ -51,6 +51,7 @@ public class BaseExternTableTest
     for (PropertyDefn<?> prop : props) {
       if (prop.name().equals(name)) {
         return prop;
+        
       }
     }
     return null;
